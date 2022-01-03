@@ -1,0 +1,26 @@
+
+<html lang="en-us">
+<head>
+    <title>Hotels</title>
+</head>
+
+<body>
+<div class="page-header">
+    <h1>
+        <a href="/">Hotels in {city}</a>
+    </h1>
+        {% for hotel in hotels %}
+            <h3>{hotel.name}</h3>
+        {% endfor %}
+    <form method="POST" class="post-form">
+        <button type="submit" class="btn btn-outline-light">
+            <a href="{% url 'city_list' %}">Retour à la page précédente</a>
+        </button>
+    </form>
+    <a href="{% url 'city_list' %}">Retour à la page précédente</a>
+
+</div>
+</body>
+</html>
+
+
